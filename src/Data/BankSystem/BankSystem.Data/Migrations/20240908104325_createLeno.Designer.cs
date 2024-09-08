@@ -4,14 +4,16 @@ using BankSystem.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BankSystem.Data.Migrations
 {
     [DbContext(typeof(BankSystemDbContext))]
-    partial class BankSystemDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240908104325_createLeno")]
+    partial class createLeno
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

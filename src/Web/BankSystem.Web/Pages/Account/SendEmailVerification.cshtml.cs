@@ -39,10 +39,10 @@
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!this.ModelState.IsValid)
+           /* if (!this.ModelState.IsValid)
             {
                 return this.Page();
-            }
+            }*/
 
             var user = await this.signInManager.UserManager.FindByNameAsync(this.Input.Email);
             if (user == null)
@@ -52,11 +52,11 @@
             }
 
             bool isEmailConfirmed = await this.signInManager.UserManager.IsEmailConfirmedAsync(user);
-            if (isEmailConfirmed)
+         /*   if (isEmailConfirmed)
             {
                 this.ShowErrorMessage(NotificationMessages.EmailAlreadyVerified);
                 return this.RedirectToLoginPage();
-            }
+            }*/
 
             var code = await this.userManager.GenerateEmailConfirmationTokenAsync(user);
             var callbackUrl = this.Url.Page(

@@ -59,7 +59,7 @@ namespace BankSystem.Web.Pages.Account
                 return this.LocalRedirect(returnUrl);
             }
 
-            if (!this.ModelState.IsValid)
+           if (!this.ModelState.IsValid)
             {
                 return this.Page();
             }
